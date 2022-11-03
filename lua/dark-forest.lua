@@ -1,6 +1,6 @@
 -- vim:fdm=marker
 
-local util = require'blue-moon.util'
+local util = require'dark-forest.util'
 
 local M = {}
 
@@ -10,14 +10,15 @@ local function highlight(group, opts)
   vim.api.nvim_set_hl(0, group, opts)
 end
 
-local bg_dark        = '#1b2b1e'
+local bg_dark        = '#1b2b1b'
 local bg             = '#112211'
 local bg_light       = '#324d37'
 local bg_lighter     = '#446742'
-local grey           = '#8796b0'
-local grey_dark      = '#353b52'
+local grey           = '#87b096'
+local grey_dark      = '#35523b'
 local red            = '#d06178'
 local heavy_red      = '#e61f44'
+local green_bright   = '#33dd33'
 local green          = '#b4c4b4'
 local green_high     = '#bcd9c4'
 local blue           = '#959dcb'
@@ -32,8 +33,8 @@ local cyan           = '#89ddff'
 local fg             = '#a6cdac'
 local fg_light       = '#bbffbb'
 local fg_dark        = '#67966e'
-local hollow         = '#424760'
-local hollow_lighter = '#30354e'
+local hollow         = '#426047'
+local hollow_lighter = '#304e35'
 local white          = '#ffffff'
 
 -- }}}
@@ -44,8 +45,8 @@ local editor_syntax = {
   ColorColumn  = { bg = bg_light },
   CursorLine   = { bg = bg },
   Cursor       = { fg = bg_dark, bg = yellow },
-  Directory    = { fg = blue, bold = true },
-  DiffAdd      = { fg = green },
+  Directory    = { fg = green, bold = true },
+  DiffAdd      = { fg = green_bright },
   DiffChange   = { fg = yellow },
   DiffDelete   = { fg = red },
   DiffText     = { fg = blue },
@@ -59,7 +60,7 @@ local editor_syntax = {
   Substitute   = { bg = blue, fg = bg },
   LineNr       = { fg = fg_dark },
   CursorLineNr = { fg = fg },
-  MatchParen   = { fg = cyan, bold = true },
+  MatchParen   = { fg = grey, bold = true },
   Normal       = { fg = fg_light, bg = bg_dark },
   NormalFloat  = { bg = grey_dark, fg = white },
   Pmenu        = { bg = grey_dark, fg = fg_light },

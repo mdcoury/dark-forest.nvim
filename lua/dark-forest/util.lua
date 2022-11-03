@@ -1,5 +1,5 @@
 local util = {
-  bg = '#1b1e2b'
+  bg = '#1b2b1e'
 }
 
 local function hexToRgb(hex_str)
