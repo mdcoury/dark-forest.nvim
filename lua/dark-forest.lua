@@ -42,23 +42,24 @@ local green_islamic     = '#008F11'
 local malachite         = '#00ff41'
 local gold              = '#FFD700'
 local gold_dark         = '#AA6C39'
+
 -- }}}
 
 -- Editor Highlight Groups {{{
 
 local editor_syntax = {
-  -- ColorColumn  = { bg = bg_light },
+  -- ColorColumn  = { bg = chartreuse },
   CursorLine   = { bg = bg },
   -- Cursor       = { fg = bg_dark, bg = yellow },
   Directory    = { fg = azure, bold = true },
   DiffAdd      = { fg = green },
   DiffChange   = { fg = yellow },
   DiffDelete   = { fg = red },
-  DiffText     = { fg = blue },
+  -- DiffText     = { fg = blue },
   -- EndOfBuffer  = { bg = bg_dark, fg = bg_dark },
   ErrorMsg     = { fg = red, bold = true },
   -- VertSplit    = { bg = bg_dark, fg = bg },
-  Folded       = { fg = green_matrix, bg = black_vampire, italic = true },
+  Folded       = { fg = green_matrix, bg = bg, italic = true },
   -- FoldColumn   = { fg = yellow },
   -- SignColumn   = { fg = yellow },
   -- IncSearch    = { bg = yellow, fg = bg },
@@ -66,7 +67,7 @@ local editor_syntax = {
   LineNr       = { fg = green_islamic, bg = green_dark, bold = false },
   CursorLineNr = { fg = green_dark, bg = green_islamic, bold = true },
   MatchParen   = { fg = cyan, bold = true },
-  Normal       = { fg = fg, bg = bg },
+  Normal       = { fg = fg, bg = black_vampire },
   -- NormalFloat  = { bg = grey_dark, fg = white },
   -- Pmenu        = { bg = grey_dark, fg = fg_light },
   -- PmenuSel     = { bg = cyan, fg = bg_lighter, bold = true },
@@ -78,7 +79,7 @@ local editor_syntax = {
   -- SpellCap     = { undercurl = true, sp = yellow },
   -- SpellLocal   = { undercurl = true, sp = orange },
   -- SpellRare    = { undercurl = true, sp = blue },
-  -- TabLine      = { bg = bg_dark, fg = fg_light },
+  -- TabLine      = { bg = bg, fg = fg },
   -- TabLineFill  = { bg = bg_dark, fg = fg_light },
   -- TabLineSel   = { bg = cyan, fg = bg_dark, bold = true},
   -- Title        = { fg = green },
@@ -157,7 +158,7 @@ local code_syntax = {
   -- Label          = { fg = blue, italic = true },
   -- Exception      = { fg = blue, italic = true },
   Operator       = { fg = fg, bold = true },
-  Keyword        = { fg = chartreuse, bold = true },
+  Keyword        = { fg = green_matrix, bold = true },
 
   Include        = { fg = yellow_banana },
   Define         = { fg = yellow_banana },
@@ -175,11 +176,11 @@ local code_syntax = {
   -- Tag            = { fg = orange },
   -- SpecialComment = { fg = fg_light, bold = true },
   -- Debug          = {},
-  -- Delimiter      = { fg = white },
+  Delimiter      = { fg = white },
 
   -- Ignore         = {},
   -- Underlined     = { underline = true },
-  -- Error          = { fg = heavy_red },
+  Error          = { fg = red },
   -- Todo           = { fg = purple, bold = true },
 }
 
@@ -234,7 +235,7 @@ local plugin_syntax = {
   -- ['@debug']                = { fg = cyan_dark, italic = true },
   -- ['@include']              = { fg = cyan_dark },
 
-  -- ['@operator'] = { fg = cyan },
+  -- ['@operator'] = { fg = fg },
   -- ['@comment']  = { fg = fg_dark, italic = true },
   -- ['@error']    = {},
   -- ['@preproc']  = { fg = yellow },
@@ -290,10 +291,10 @@ local plugin_syntax = {
   -- NeotestTest = { fg = green },
   -- NeotestUnknown = { fg = grey, bold = true },
 
-  -- NvimTreeLspDiagnosticsError = { fg = red, bold = true },
-  -- NvimTreeLspDiagnosticsWarning = { fg = orange, bold = true },
-  -- NvimTreeLspDiagnosticsInformation = { fg = yellow, bold = true },
-  -- NvimTreeLspDiagnosticsHint = { fg = green, bold = true },
+  NvimTreeLspDiagnosticsError = { fg = red, bold = true },
+  NvimTreeLspDiagnosticsWarning = { fg = yellow, bold = true },
+  NvimTreeLspDiagnosticsInformation = { fg = green, bold = true },
+  NvimTreeLspDiagnosticsHint = { fg = grey, bold = true },
 
   -- GitSignsAdd = { fg = green_high },
   -- GitSignsChange = { fg = orange_light },
@@ -319,7 +320,7 @@ function M.setup()
     highlight(group, styles)
   end
 
-  vim.api.nvim_set_var('terminal_color_0',          bg)
+  vim.api.nvim_set_var('terminal_color_0',          black_vampire)
   vim.api.nvim_set_var('terminal_color_1',          red)
   vim.api.nvim_set_var('terminal_color_2',          green)
   vim.api.nvim_set_var('terminal_color_3',          yellow)
