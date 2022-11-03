@@ -29,64 +29,44 @@ local purple            = '#800080'
 local olive             = '#808000'
 
 local white             = '#ffffff'
-local grey_light        = '#bbbbbb'
+local grey_light        = '#cccccc'
 local grey              = '#888888'
 local grey_dark         = '#555555'
 local black             = '#000000'
 
--- local bg_dark        = '#1b2b1b'
--- local bg             = '#112211'
--- local bg_light       = '#324d37'
--- local bg_lighter     = '#446742'
--- local grey           = '#87b096'
--- local grey_dark      = '#35523b'
--- local grey_light     = '#bcbcbc'
--- local red            = '#d04242'
--- local heavy_red      = '#e61144'
--- local green_bright   = '#33dd33'
--- local green          = '#b4c4b4'
--- local green_high     = '#bcd9c4'
--- local blue           = '#959dcb'
--- local blue_light     = '#b8bcf3'
--- local yellow         = '#cfcfbf'
--- local yellow_light   = '#dfdf9f' 
--- local orange         = '#b4b4b4'
--- local orange_light   = '#c2b0b0'
--- local purple         = '#b9a3eb'
--- local cyan_dark      = '#89bbdd'
--- local cyan           = '#89ddff'
--- local fg             = '#a6cdac'
--- local fg_light       = '#bbffbb'
--- local fg_dark        = '#67966e'
--- local hollow         = '#426047'
--- local hollow_lighter = '#304e35'
--- local white          = '#ffffff'
-
+local yellow_banana     = '#ffe135'
+local green_matrix      = '#03A062'
+local green_dark        = '#003B00'
+local black_vampire     = '#0D0208'
+local green_islamic     = '#008F11'
+local malachite         = '#00ff41'
+local gold              = '#FFD700'
+local gold_dark         = '#AA6C39'
 -- }}}
 
 -- Editor Highlight Groups {{{
 
 local editor_syntax = {
   -- ColorColumn  = { bg = bg_light },
-  -- CursorLine   = { bg = bg },
+  CursorLine   = { bg = bg },
   -- Cursor       = { fg = bg_dark, bg = yellow },
-  -- Directory    = { fg = green, bold = true },
-  -- DiffAdd      = { fg = green_bright },
-  -- DiffChange   = { fg = yellow },
-  -- DiffDelete   = { fg = red },
-  -- DiffText     = { fg = blue },
+  Directory    = { fg = azure, bold = true },
+  DiffAdd      = { fg = green },
+  DiffChange   = { fg = yellow },
+  DiffDelete   = { fg = red },
+  DiffText     = { fg = blue },
   -- EndOfBuffer  = { bg = bg_dark, fg = bg_dark },
-  -- ErrorMsg     = { fg = red, bold = true },
+  ErrorMsg     = { fg = red, bold = true },
   -- VertSplit    = { bg = bg_dark, fg = bg },
-  -- Folded       = { fg = fg_dark, italic = true },
+  Folded       = { fg = green_matrix, bg = black_vampire, italic = true },
   -- FoldColumn   = { fg = yellow },
   -- SignColumn   = { fg = yellow },
   -- IncSearch    = { bg = yellow, fg = bg },
   -- Substitute   = { bg = blue, fg = bg },
-  -- LineNr       = { fg = fg_dark },
-  -- CursorLineNr = { fg = fg },
-  -- MatchParen   = { fg = grey, bold = true },
-  -- Normal       = { fg = fg_light, bg = bg_dark },
+  LineNr       = { fg = green_islamic, bg = green_dark, bold = false },
+  CursorLineNr = { fg = green_dark, bg = green_islamic, bold = true },
+  MatchParen   = { fg = cyan, bold = true },
+  Normal       = { fg = fg, bg = bg },
   -- NormalFloat  = { bg = grey_dark, fg = white },
   -- Pmenu        = { bg = grey_dark, fg = fg_light },
   -- PmenuSel     = { bg = cyan, fg = bg_lighter, bold = true },
@@ -128,8 +108,8 @@ local editor_syntax = {
   -- gitcommitNoBranch       = { fg = purple },
   -- gitcommitDiscardedType  = { fg = red },
   -- gitcommitSelectedType   = { fg = green },
-  -- gitcommitUntrackedFile  = { fg = cyan },
-  -- gitcommitDiscardedFile  = { fg = red },
+  -- gitcommitUntrackedFile  = { fg = grey },
+  -- gitcommitDiscardedFile  = { fg = grey_dark },
   -- gitcommitDiscardedArrow = { fg = red },
   -- gitcommitSelectedFile   = { fg = green },
   -- gitcommitSelectedArrow  = { fg = green },
@@ -160,30 +140,30 @@ local editor_syntax = {
 -- Vim Default Code Syntax {{{
 
 local code_syntax = {
-  -- Comment        = { fg = fg_dark, italic = true },
-  -- Constant       = { fg = grey_light, bold = true },
-  -- String         = { fg = grey_light, bold = true },
-  -- Character      = { fg = grey_light, bold = true },
-  -- Number         = { fg = orange },
-  -- Float          = { fg = orange },
-  -- Boolean        = { fg = orange },
+  Comment        = { fg = gold_dark, italic = true, bold = true },
+  Constant       = { fg = grey_light, bold = true },
+  String         = { fg = grey_light, bold = true },
+  Character      = { fg = grey_light, bold = true },
+  Number         = { fg = grey_light, bold = true },
+  Float          = { fg = grey_light, bold = true },
+  Boolean        = { fg = grey_light, bold = true },
 
-  -- Identifier     = { fg = heavy_red },
-  -- Function       = { fg = blue, italic = true },
+  Identifier     = { fg = fg },
+  Function       = { fg = fg, bold = true },
 
-  -- Statement      = { fg = blue_light, italic = true },
-  -- Conditional    = { fg = blue, italic = true },
+  Statement      = { fg = green_matrix, bold = true },
+  Conditional    = { fg = green_matrix, bold = true },
   -- Repeat         = { fg = blue, italic = true },
   -- Label          = { fg = blue, italic = true },
   -- Exception      = { fg = blue, italic = true },
-  -- Operator       = { fg = blue },
-  -- Keyword        = { fg = heavy_red },
+  Operator       = { fg = fg, bold = true },
+  Keyword        = { fg = chartreuse, bold = true },
 
-  -- Include        = { fg = blue_light },
-  -- Define         = { fg = purple },
-  -- Macro          = { fg = purple },
-  -- PreProc        = { fg = yellow },
-  -- PreCondit      = { fg = yellow },
+  Include        = { fg = yellow_banana },
+  Define         = { fg = yellow_banana },
+  Macro          = { fg = yellow_banana, bold = true },
+  PreProc        = { fg = yellow_banana },
+  PreCondit      = { fg = yellow_banana },
 
   -- Type           = { fg = yellow },
   -- StorageClass   = { fg = yellow },
@@ -195,7 +175,7 @@ local code_syntax = {
   -- Tag            = { fg = orange },
   -- SpecialComment = { fg = fg_light, bold = true },
   -- Debug          = {},
-  -- Delimiter      = {},
+  -- Delimiter      = { fg = white },
 
   -- Ignore         = {},
   -- Underlined     = { underline = true },
@@ -208,10 +188,10 @@ local code_syntax = {
 -- Plugin Highlight Groups {{{
 
 local plugin_syntax = {
-  -- GitGutterAdd           = { fg = green },
-  -- GitGutterChange        = { fg = yellow },
-  -- GitGutterDelete        = { fg = red },
-  -- GitGutterChangeDelete  = { fg = orange },
+  GitGutterAdd           = { fg = green },
+  GitGutterChange        = { fg = yellow },
+  GitGutterDelete        = { fg = red },
+  GitGutterChangeDelete  = { fg = orange },
 
   -- diffAdded              = { fg = green },
   -- diffRemoved            = { fg = heavy_red },
@@ -355,7 +335,7 @@ function M.setup()
   vim.api.nvim_set_var('terminal_color_13',         purple)
   vim.api.nvim_set_var('terminal_color_14',         cyan)
   vim.api.nvim_set_var('terminal_color_15',         white)
-  vim.api.nvim_set_var('terminal_color_background', bg)
+  vim.api.nvim_set_var('terminal_color_background', black_vampire)
   vim.api.nvim_set_var('terminal_color_foreground', fg)
 end
 
