@@ -136,7 +136,7 @@ local editor_syntax = {
 -- Vim Default Code Syntax {{{
 
 local code_syntax = {
-  Comment        = { fg = fg_light, italic = true },
+  Comment        = { fg = fg_dark, italic = true },
   Constant       = { fg = grey_light, bold = true },
   String         = { fg = grey_light, bold = true },
   Character      = { fg = grey_light, bold = true },
