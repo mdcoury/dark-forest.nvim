@@ -192,9 +192,9 @@ local plugin_syntax = {
   diffAdded              = { fg = green },
   diffRemoved            = { fg = heavy_red },
 
-  ['@punctuation.delimiter'] = { fg = white },
-  ['@punctuation.bracket']   = { fg = cyan_dark },
-  ['@punctuation.special']   = { fg = cyan },
+  ['@punctuation.delimiter'] = { fg = grey_light },
+  ['@punctuation.bracket']   = { fg = grey_light },
+  ['@punctuation.special']   = { fg = grey_light },
 
   ['@constant']         = { fg = yellow },
   ['@constant.builtin'] = { fg = orange },
@@ -231,7 +231,7 @@ local plugin_syntax = {
   ['@include']              = { fg = cyan_dark },
 
   ['@operator'] = { fg = cyan },
-  ['@comment']  = { fg = fg_light, italic = true },
+  ['@comment']  = { fg = fg_dark, italic = true },
   ['@error']    = {},
   ['@preproc']  = { fg = yellow },
   ['@define']   = { fg = purple },
