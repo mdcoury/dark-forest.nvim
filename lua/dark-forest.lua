@@ -16,6 +16,7 @@ local bg_light       = '#324d37'
 local bg_lighter     = '#446742'
 local grey           = '#87b096'
 local grey_dark      = '#35523b'
+local grey_light     = '#bcbcbc'
 local red            = '#d06178'
 local heavy_red      = '#e61f44'
 local green_bright   = '#33dd33'
@@ -135,10 +136,10 @@ local editor_syntax = {
 -- Vim Default Code Syntax {{{
 
 local code_syntax = {
-  Comment        = { fg = fg_dark, italic = true },
-  Constant       = { fg = cyan },
-  String         = { fg = green },
-  Character      = { fg = green, bold = true },
+  Comment        = { fg = fg_light, italic = true },
+  Constant       = { fg = grey_light, bold = true },
+  String         = { fg = grey_light, bold = true },
+  Character      = { fg = grey_light, bold = true },
   Number         = { fg = orange },
   Float          = { fg = orange },
   Boolean        = { fg = orange },
@@ -168,7 +169,7 @@ local code_syntax = {
   Special        = { fg = blue },
   SpecialChar    = {},
   Tag            = { fg = orange },
-  SpecialComment = { fg = fg_dark, bold = true },
+  SpecialComment = { fg = fg_light, bold = true },
   Debug          = {},
   Delimiter      = {},
 
@@ -230,7 +231,7 @@ local plugin_syntax = {
   ['@include']              = { fg = cyan_dark },
 
   ['@operator'] = { fg = cyan },
-  ['@comment']  = { fg = fg_dark, italic = true },
+  ['@comment']  = { fg = fg_light, italic = true },
   ['@error']    = {},
   ['@preproc']  = { fg = yellow },
   ['@define']   = { fg = purple },
