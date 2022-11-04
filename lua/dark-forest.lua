@@ -10,29 +10,29 @@ local function highlight(group, opts)
   vim.api.nvim_set_hl(0, group, opts)
 end
 
-local bg = '#112211'
-local fg = '#adadad'
+local bg            = '#112211'
+local fg            = '#adadad'
 
-local red     = '#ff0000'
-local green   = '#00ff00'
-local blue    = '#0000ff'
-local yellow  = '#ffff00'
-local magenta = '#ff00ff'
-local cyan    = '#00ffff'
+local red           = '#ff0000'
+local green         = '#00ff00'
+local blue          = '#0000ff'
+local yellow        = '#ffff00'
+local magenta       = '#ff00ff'
+local cyan          = '#00ffff'
 
-local azure      = '#0080ff'
-local chartreuse = '#80ff00'
-local orange     = '#ff8000'
+local azure         = '#0080ff'
+local chartreuse    = '#80ff00'
+local orange        = '#ff8000'
 
-local teal   = '#008080'
-local purple = '#800080'
-local olive  = '#808000'
+local teal          = '#008080'
+local purple        = '#800080'
+local olive         = '#808000'
 
-local white      = '#ffffff'
-local grey_light = '#cccccc'
-local grey       = '#888888'
-local grey_dark  = '#555555'
-local black      = '#000000'
+local white         = '#ffffff'
+local grey_light    = '#cccccc'
+local grey          = '#888888'
+local grey_dark     = '#555555'
+local black         = '#000000'
 
 local yellow_banana = '#ffe135'
 local green_matrix  = '#03A062'
@@ -42,6 +42,7 @@ local green_islamic = '#008F11'
 local malachite     = '#00ff41'
 local gold          = '#FFD700'
 local gold_dark     = '#AA6C39'
+local pink          = '#FFC0CB'
 
 -- }}}
 
@@ -58,7 +59,7 @@ local editor_syntax = {
   DiffChange   = { fg = yellow },
   DiffDelete   = { fg = red },
   DiffText     = { fg = blue },
-  EndOfBuffer  = { fg = green_dark, bg = black },
+  EndOfBuffer  = { fg = grey_dark, bg = black },
   ErrorMsg     = { fg = red, bold = true },
   -- VertSplit    = { bg = bg_dark, fg = bg },
   Folded       = { fg = green_matrix, bg = bg, italic = true },
@@ -319,7 +320,7 @@ function M.setup()
   vim.api.nvim_set_var('terminal_color_1', red)
   vim.api.nvim_set_var('terminal_color_2', green)
   vim.api.nvim_set_var('terminal_color_3', yellow)
-  vim.api.nvim_set_var('terminal_color_4', blue)
+  vim.api.nvim_set_var('terminal_color_4', pink)
   vim.api.nvim_set_var('terminal_color_5', gold)
   vim.api.nvim_set_var('terminal_color_6', cyan)
   vim.api.nvim_set_var('terminal_color_7', fg)
@@ -327,7 +328,7 @@ function M.setup()
   vim.api.nvim_set_var('terminal_color_9', red)
   vim.api.nvim_set_var('terminal_color_10', green)
   vim.api.nvim_set_var('terminal_color_11', orange)
-  vim.api.nvim_set_var('terminal_color_12', blue)
+  vim.api.nvim_set_var('terminal_color_12', pink)
   vim.api.nvim_set_var('terminal_color_13', chartreuse)
   vim.api.nvim_set_var('terminal_color_14', cyan)
   vim.api.nvim_set_var('terminal_color_15', white)
