@@ -34,6 +34,9 @@ local grey          = '#888888'
 local grey_dark     = '#555555'
 local black         = '#000000'
 
+local olive_drab    = '#6b8e23'
+local maroon        = '#800000'
+local crimson       = '#dc143c'
 local yellow_banana = '#ffe135'
 local green_matrix  = '#03A062'
 local green_dark    = '#003B00'
@@ -72,8 +75,8 @@ local editor_syntax = {
   LineNr        = { fg = green_islamic, bg = bg, bold = false },
   CursorLineNr  = { fg = green_dark, bg = green_lime, bold = true },
   MatchParen    = { fg = cyan, bold = true },
-  MsgArea       = { bg = bg },
-  -- MsgSeparator  = { fg = fg, bg = bg },
+  MsgArea       = { fg = fg, bg = bg },
+  MsgSeparator  = { fg = bg, bg = fg },
   Normal        = { fg = fg, bg = black_vampire },
   NormalFloat   = { bg = grey_dark, fg = white },
   Pmenu         = { fg = azure, bold = true },
@@ -143,46 +146,47 @@ local editor_syntax = {
 
 local code_syntax = {
   Comment   = { fg = gold_dark, italic = true, bold = true },
+
   Constant  = { fg = grey_light, bold = true },
-  String    = { fg = grey_light, bold = true },
-  Character = { fg = grey_light, bold = true },
-  Number    = { fg = grey_light, bold = true },
-  Float     = { fg = grey_light, bold = true },
-  Boolean   = { fg = grey_light, bold = true },
+  -- String    = { fg = grey_light, bold = true },
+  -- Character = { fg = grey_light, bold = true },
+  -- Number    = { fg = grey_light, bold = true },
+  -- Boolean   = { fg = grey_light, bold = true },
+  -- Float     = { fg = grey_light, bold = true },
 
   Identifier = { fg = fg, bold = true },
-  Function   = { fg = fg, bold = true },
+  -- Function   = { fg = fg, bold = true },
 
   Statement   = { fg = green_matrix, bold = true },
-  Conditional = { fg = green_matrix, bold = true },
+  -- Conditional = { fg = green_matrix, bold = true },
   -- Repeat         = { fg = blue, italic = true },
-  -- Label          = { fg = blue, italic = true },
-  -- Exception      = { fg = blue, italic = true },
-  Operator    = { fg = fg, bold = true },
-  Keyword     = { fg = green_matrix, bold = true },
+  Label          = { fg = green_forest, italic = true },
+  Operator    = { fg = fg, bold = true, italic = true },
+  Keyword     = { fg = olive_drab, bold = true },
+  Exception      = { fg = olive, bold = true, italic = true },
 
-  Include   = { fg = yellow_banana },
-  Define    = { fg = yellow_banana },
-  Macro     = { fg = yellow_banana, bold = true },
   PreProc   = { fg = yellow_banana },
-  PreCondit = { fg = yellow_banana },
+  -- Include   = { fg = yellow_banana },
+  -- Define    = { fg = yellow_banana },
+  Macro     = { fg = yellow_banana, bold = true },
+  -- PreCondit = { fg = yellow_banana },
 
-  Type = { fg = green_matrix },
-  -- StorageClass   = { fg = yellow },
+  Type            = { fg = green_matrix },
+  StorageClass   = { fg = gold, italic = true },
   Structure      = { fg = teal },
-  -- Typedef        = { fg = yellow },
+  Typedef        = { fg = yellow },
 
   Special        = { fg = fg, bold = true },
   -- SpecialChar    = {},
-  -- Tag            = { fg = orange },
+  Tag            = { fg = orange, underline = true },
+  -- Delimiter = { fg = yellow },
   -- SpecialComment = { fg = fg_light, bold = true },
   -- Debug          = {},
-  Delimiter = { fg = white },
 
+  Underlined     = { underline = true },
   -- Ignore         = {},
-  -- Underlined     = { underline = true },
-  Error = { fg = red },
-  Todo           = { fg = gold_dark, italic = true },
+  Error         = { fg = red, italic = true },
+  Todo           = { fg = gold, italic = true },
 }
 
 -- }}}
