@@ -38,7 +38,9 @@ local yellow_banana = '#ffe135'
 local green_matrix  = '#03A062'
 local green_dark    = '#003B00'
 local black_vampire = '#0D0208'
+local green_forest  = '#228b22'
 local green_islamic = '#008F11'
+local green_lime    = '#adddad'
 local malachite     = '#00ff41'
 local gold          = '#FFD700'
 local gold_dark     = '#AA6C39'
@@ -67,7 +69,7 @@ local editor_syntax = {
   -- SignColumn   = { fg = yellow },
   -- IncSearch    = { bg = yellow, fg = bg },
   -- Substitute   = { bg = blue, fg = bg },
-  LineNr       = { fg = green_islamic, bg = green_dark, bold = false },
+  LineNr       = { fg = green_lime, bg = green_dark, bold = false },
   CursorLineNr = { fg = green_dark, bg = green_islamic, bold = true },
   MatchParen   = { fg = cyan, bold = true },
   MsgArea      = { bg = bg },
