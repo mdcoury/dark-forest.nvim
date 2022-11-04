@@ -167,9 +167,9 @@ local code_syntax = {
   PreProc   = { fg = yellow_banana },
   PreCondit = { fg = yellow_banana },
 
-  Type = { fg = fg },
+  Type = { fg = green_matrix },
   -- StorageClass   = { fg = yellow },
-  -- Structure      = { fg = yellow },
+  Structure      = { fg = teal },
   -- Typedef        = { fg = yellow },
 
   Special        = { fg = fg, bold = true },
