@@ -160,7 +160,7 @@ local code_syntax = {
   Statement   = { fg = green_matrix, bold = true },
   -- Conditional = { fg = green_matrix, bold = true },
   -- Repeat         = { fg = blue, italic = true },
-  Label          = { fg = green_forest, italic = true },
+  Label          = { fg = orange, italic = true },
   Operator    = { fg = fg, bold = true, italic = true },
   Keyword     = { fg = olive_drab, bold = true },
   Exception      = { fg = olive, bold = true, italic = true },
