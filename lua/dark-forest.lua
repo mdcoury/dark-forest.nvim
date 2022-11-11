@@ -49,6 +49,12 @@ local gold          = '#FFD700'
 local gold_dark     = '#AA6C39'
 local pink          = '#FFC0CB'
 
+local yellow_muted  = '#EBD4A2'
+local green_muted   = '#5FA052'
+local red_muted     = '#CB4C4E'
+local blue_muted    = '#3B719F'
+local orange_muted  = '#EB9C5C'
+
 -- }}}
 
 -- Ref: https://neovim.io/doc/user/syntax.html#highlight-groups
@@ -61,10 +67,10 @@ local editor_syntax = {
   CursorLine    = { bg = bg },
   -- Cursor       = { fg = bg_dark, bg = yellow },
   Directory     = { fg = azure, bold = true },
-  DiffAdd       = { fg = green },
-  DiffChange    = { fg = yellow },
-  DiffDelete    = { fg = red },
-  DiffText      = { fg = blue },
+  DiffAdd       = { fg = green_muted },
+  DiffChange    = { fg = yellow_muted },
+  DiffDelete    = { fg = red_muted },
+  DiffText      = { fg = blue_muted },
   EndOfBuffer   = { fg = grey_dark, bg = black },
   ErrorMsg      = { fg = red, bold = true },
   -- VertSplit    = { bg = bg_dark, fg = bg },
@@ -194,10 +200,10 @@ local code_syntax = {
 -- Plugin Highlight Groups {{{
 
 local plugin_syntax = {
-  GitGutterAdd          = { fg = green },
-  GitGutterChange       = { fg = yellow },
-  GitGutterDelete       = { fg = red },
-  GitGutterChangeDelete = { fg = orange },
+  GitGutterAdd          = { fg = green_muted },
+  GitGutterChange       = { fg = yellow_muted },
+  GitGutterDelete       = { fg = red_muted },
+  GitGutterChangeDelete = { fg = orange_muted },
 
   -- diffAdded              = { fg = green },
   -- diffRemoved            = { fg = heavy_red },
