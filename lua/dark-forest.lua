@@ -78,6 +78,7 @@ local editor_syntax = {
   FoldColumn    = { bg = gold, fg = black },
   -- IncSearch    = { bg = yellow, fg = bg },
   -- Substitute   = { bg = blue, fg = bg },
+  LineLeft      = { fg = grey_dark },
   LineNr        = { fg = green_islamic, bg = bg, bold = false },
   CursorLineNr  = { fg = green_dark, bg = green_lime, bold = true },
   MatchParen    = { fg = cyan, bold = true },
