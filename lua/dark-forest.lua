@@ -62,7 +62,7 @@ local orange_muted  = '#EB9C5C'
 -- Editor Highlight Groups {{{
 
 local editor_syntax = {
-  -- ColorColumn  = { bg = chartreuse },
+  ColorColumn   = { bg = grey_dark },
   Conceal       = { fg = black, bg = grey_light },
   CursorLine    = { bg = bg },
   -- Cursor       = { fg = bg_dark, bg = yellow },
