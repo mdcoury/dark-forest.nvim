@@ -32,6 +32,8 @@ local white         = '#ffffff'
 local grey_light    = '#cccccc'
 local grey          = '#888888'
 local grey_dark     = '#555555'
+local grey_darker   = '#222222'
+local black_near    = '#111111'
 local black         = '#000000'
 
 local olive_drab    = '#6b8e23'
@@ -48,6 +50,12 @@ local malachite     = '#00ff41'
 local gold          = '#FFD700'
 local gold_dark     = '#AA6C39'
 local pink          = '#FFC0CB'
+local black_midnite = '#00040D'
+local black_of_nite = '#1b1e23'
+local blue_sky      = '#87CEEB'
+local mauve         = '#E0B0FF'
+local peach         = '#FFE5B4'
+local lavender      = '#E6E6FA'
 
 local yellow_muted  = '#EBD4A2'
 local green_muted   = '#5FA052'
@@ -62,9 +70,9 @@ local orange_muted  = '#EB9C5C'
 -- Editor Highlight Groups {{{
 
 local editor_syntax = {
-  ColorColumn   = { bg = grey_dark },
-  Conceal       = { fg = black, bg = grey_light },
-  CursorLine    = { bg = bg },
+  ColorColumn   = { bg = black_near },
+  Conceal       = { fg = black, bg = grey_dark },
+  CursorLine    = { bg = black_of_nite },
   -- Cursor       = { fg = bg_dark, bg = yellow },
   Directory     = { fg = azure, bold = true },
   DiffAdd       = { fg = green_muted },
@@ -102,7 +110,7 @@ local editor_syntax = {
   -- TabLineFill   = { bg = bg, fg = fg },
   -- TabLineSel    = { bg = bg, fg = fg, bold = true},
   -- Title        = { fg = gold },
-  -- Visual       = { bg = hollow_lighter },
+  Visual       = { bg = green_dark, bold = true },
   -- VisualNOS    = { bg = hollow_lighter },
   WarningMsg    = { fg = yellow, italic = true },
   -- Whitespace   = { bg = yellow }, -- TODO: i don't know where this is
@@ -205,6 +213,36 @@ local plugin_syntax = {
   GitGutterChange       = { fg = yellow_muted },
   GitGutterDelete       = { fg = red_muted },
   GitGutterChangeDelete = { fg = orange_muted },
+
+  --       DapBreakpoint = { fg = red },
+		-- DapBreakpointndition = { fg = yellow },
+		-- DapLogPoint = { fg = blue_sky },
+
+		-- -- nvim-dap-ui
+		-- DAPUIScope = { fg = blue_sky },
+		-- DAPUIType = { fg = mauve },
+		-- DAPUIValue = { fg = blue_sky },
+		-- DAPUIVariable = { fg = fg },
+		-- DapUIModifiedValue = { fg = peach },
+		-- DapUIDecoration = { fg = blue_sky },
+		-- DapUIThread = { fg = green },
+		-- DapUIStoppedThread = { fg = blue_sky },
+		-- DapUISource = { fg = lavender },
+		-- DapUILineNumber = { fg = blue_sky },
+		-- DapUIFloatBorder = { fg = blue_sky },
+
+		-- DapUIWatchesEmpty = { fg = maroon },
+		-- DapUIWatchesValue = { fg = green },
+		-- DapUIWatchesError = { fg = maroon },
+
+		-- DapUIBreakpointsPath = { fg = blue_sky },
+		-- DapUIBreakpointsInfo = { fg = green },
+		-- DapUIBreakpointsrrentLine = { fg = green, bold = true },
+		-- DapUIBreakpointsDisabledLine = { fg = grey },
+
+    -- DapBreakpoint   = { fg = red, bg = red_muted, bold = true },
+    -- DapStopped      = { fg = black, bg = green_dark, bold = true },
+    -- DapLogPoint     = { bg = green },
 
   -- diffAdded              = { fg = green },
   -- diffRemoved            = { fg = heavy_red },
